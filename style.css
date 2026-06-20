@@ -1,0 +1,115 @@
+/* General Reset */
+* { box-sizing: border-box; margin:0; padding:0; font-family: 'Segoe UI', sans-serif; }
+body { background:#f4f6f8; color:#2e2e2e; line-height:1.6; }
+
+/* Header */
+header { 
+    text-align:center; 
+    padding:1rem; 
+    background:#2d2d2d;   /* Charcoal */
+    color:white; 
+    box-shadow:0 2px 4px rgba(0,0,0,0.1);
+}
+header h1 { font-size:2.5rem; margin-bottom:0.3rem; }
+header p { font-size:1rem; }
+
+/* Layout */
+main { display:flex; gap:1rem; padding:1rem; }
+.left-column { flex:2; }
+.right-column { flex:1; display:flex; flex-direction:column; gap:1rem; }
+
+/* Cards */
+.game-card, .history-card, .fasai-card, .opinion-card, .motivation-card-section { 
+    background:white; 
+    padding:1rem; 
+    border-radius:10px; 
+    box-shadow:0 2px 6px rgba(0,0,0,0.1); 
+}
+
+/* Sentence Box */
+.sentence-box { 
+    background:#eeeeee; 
+    padding:0.8rem; 
+    margin:0.5rem 0; 
+    border-radius:5px; 
+    min-height:50px; 
+    font-weight:bold; 
+}
+
+/* Audio & Speech Buttons */
+.audio-controls button, 
+.speech-controls button, 
+#submitOpinionBtn, 
+#newSentenceBtn, 
+#askFasAI, 
+#suggestPractice { 
+    margin:0.3rem; 
+    padding:0.4rem 0.8rem; 
+    border:none; 
+    border-radius:5px; 
+    background:#4CAF50;   /* Green */
+    color:white; 
+    cursor:pointer; 
+    transition:0.3s; 
+}
+
+.audio-controls button:hover, 
+.speech-controls button:hover, 
+#submitOpinionBtn:hover, 
+#newSentenceBtn:hover, 
+#askFasAI:hover, 
+#suggestPractice:hover { 
+    background:#43A047;   /* Darker green */
+}
+
+.hidden-audio { display:none; margin-top:0.5rem; }
+
+/* Scores */
+.score-card { 
+    margin-top:0.8rem; 
+    background:#eeeeee; 
+    padding:0.5rem; 
+    border-radius:5px; 
+}
+.hidden { display:none; }
+
+/* History Table */
+#historyTable { width:100%; border-collapse:collapse; margin-top:0.5rem; }
+#historyTable th, #historyTable td { border:1px solid #d1d1d1; padding:0.4rem; text-align:center; }
+#historyTable th { background:#e8e8e8; }
+
+/* Opinions */
+#opinionBox { 
+    width:100%; 
+    min-height:80px; 
+    margin-top:0.5rem; 
+    padding:0.5rem; 
+    border-radius:5px; 
+    border:1px solid #d1d1d1; 
+}
+.opinion-item { background:#f3f3f3; padding:0.5rem; margin-top:0.3rem; border-radius:5px; }
+
+/* Motivation Corner */
+.motivation-card img { 
+    width:100%; 
+    border-radius:10px; 
+    object-fit:cover; 
+    height:150px; 
+}
+.motivation-text { 
+    text-align:center; 
+    font-weight:bold; 
+    margin-top:0.3rem; 
+    color:#2d2d2d; 
+}
+
+/* Footer */
+footer { 
+    text-align:center; 
+    padding:0.5rem; 
+    margin-top:1rem; 
+    background:#2d2d2d;   /* Charcoal */
+    color:white; 
+    border-top-left-radius:10px; 
+    border-top-right-radius:10px; 
+}

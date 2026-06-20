@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SpeakSmart</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>SpeakSmart</h1>
+    <p>Improve your English speaking & pronunciation skills with AI assistance!</p>
+  </header>
+
+  <main>
+    <!-- Left Column: Game -->
+    <section class="left-column">
+      <div class="game-card">
+        <h2>Speaking Practice</h2>
+        <label for="scenarioSelect">Choose a scenario:</label>
+        <select id="scenarioSelect"></select>
+        <button id="newSentenceBtn">Generate Sentence</button>
+
+        <div class="sentence-box">
+          <p id="sentenceText">Click "Generate Sentence" to start!</p>
+        </div>
+
+        <div class="audio-controls">
+          <button id="listenBtn">Listen</button>
+          <button id="recordBtn">Record</button>
+          <button id="stopRecordBtn" disabled>Stop</button>
+          <audio id="playback" controls class="hidden-audio"></audio>
+        </div>
+
+        <div class="speech-controls">
+          <button id="startRecBtn">Speak Now</button>
+          <p id="transcript">Transcript will appear here.</p>
+        </div>
+
+        <div id="scoreBlock" class="score-card hidden">
+          <h3>Your Scores</h3>
+          <p>Total Score: <span id="totalScore">—</span>%</p>
+          <p>Accuracy: <span id="accScore">—</span>% | Pronunciation: <span id="pronScore">—</span>% | Fluency: <span id="fluScore">—</span>%</p>
+          <div id="summary"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Right Column: History, Graph, FasAI -->
+    <section class="right-column">
+      <div class="history-card">
+        <h2>Progress History</h2>
+        <canvas id="progressChart"></canvas>
+        <table id="historyTable">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Date/Time</th>
+              <th>Scenario</th>
+              <th>Total %</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <button id="clearHistoryBtn">Clear History</button>
+      </div>
+
+      <div class="fasai-card">
+        <h2>FasAI Assistant</h2>
+        <input type="text" id="fasaiInput" placeholder="Ask FasAI...">
+        <button id="askFasAI">Ask</button>
+        <button id="suggestPractice">Suggest Practice</button>
+        <p id="fasaiReply"></p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Opinions & Motivation -->
+  <section class="bottom-section">
+    <div class="opinion-card">
+      <h2>Share Your Opinion</h2>
+      <textarea id="opinionBox" placeholder="Your Opinion: "></textarea>
+      <p>Maximum 500 words.</p>
+      <button id="submitOpinionBtn">Submit</button>
+      <div id="opinionsList"></div>
+    </div>
+
+    <div class="motivation-card-section">
+      <h2>Motivation Corner</h2>
+      <div id="motivationBox"></div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 FAS</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
